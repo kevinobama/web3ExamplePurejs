@@ -1,0 +1,5 @@
+<script type="text/javascript" src="web3.min.js"></script>
+<script type="text/javascript">
+ var web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
+ document.writeln(web3.utils.randomHex(32));
+</script>

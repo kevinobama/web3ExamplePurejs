@@ -1,0 +1,19 @@
+<script type="text/javascript" src="web3.min.js"></script>
+<script type="text/javascript">
+ var web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
+ 
+
+ // var result = web3.eth.accounts.wallet();
+ // console.log(result);
+  web3.eth.defaultAccount = '0x7B2de74C0C0ADCb078f7035ECd1f8934884bE717';
+ var myContract = new web3.eth.Contract([...], '0x7B2de74C0C0ADCb078f7035ECd1f8934884bE717', {
+    from: '0x7B2de74C0C0ADCb078f7035ECd1f8934884bE717', // default from address
+    gasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
+});
+
+//  console.log(myContract);
+
+console.log(web3.eth.Contract.defaultAccount);
+</script>
+
+web3.eth.Contract
